@@ -1,16 +1,16 @@
-const textoParaDigitar = "A linguagem Java é uma linguagem de programação amplamente utilizada...";
+const textToType = "The Java language is a widely used programming language...";
 
-const elementoTexto = document.getElementById("texto-digitar");
-let textoExibido = "";
+const textElement = document.getElementById("typing-text");
+let displayedText = "";
 let index = 0;
 
-function digitarTexto() {
-    if (index < textoParaDigitar.length) {
-        textoExibido += textoParaDigitar.charAt(index);
-        elementoTexto.textContent = textoExibido;
+function typeText() {
+    if (index < textToType.length) {
+        displayedText += textToType.charAt(index);
+        textElement.textContent = displayedText;
         index++;
-        setTimeout(digitarTexto, 50); // Velocidade de digitação (em milissegundos)
+        setTimeout(typeText, 50); // Typing speed (in milliseconds)
     }
 }
 
-digitarTexto();
+typeText();
